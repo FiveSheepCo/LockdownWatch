@@ -17,6 +17,11 @@
 		74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06A5262B694800552F0C /* ComplicationController.swift */; };
 		74CD06A8262B694800552F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06A7262B694800552F0C /* Assets.xcassets */; };
 		74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06AA262B694800552F0C /* Preview Assets.xcassets */; };
+		74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C0262B6AB300552F0C /* HomeView.swift */; };
+		74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C8262B6AC900552F0C /* SettingsView.swift */; };
+		74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */; };
+		74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72F1262B89E400DA28A8 /* AppState.swift */; };
+		74FB72F7262B92D800DA28A8 /* siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74FB72F6262B92D800DA28A8 /* siren.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		74CD06AA262B694800552F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74CD06AC262B694800552F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CD06AD262B694800552F0C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		74CD06C0262B6AB300552F0C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		74CD06C8262B6AC900552F0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		74FB72F1262B89E400DA28A8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		74FB72F6262B92D800DA28A8 /* siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = siren.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,10 @@
 		74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74FB72F6262B92D800DA28A8 /* siren.caf */,
+				74CD06CD262B6B4D00552F0C /* ViewModels */,
+				74CD06BF262B6AA800552F0C /* Components */,
+				74CD06BE262B6AA400552F0C /* Views */,
 				74CD069D262B694800552F0C /* LockdownWatchApp.swift */,
 				74CD069F262B694800552F0C /* ContentView.swift */,
 				74CD06A1262B694800552F0C /* NotificationController.swift */,
@@ -139,6 +153,31 @@
 				74CD06AA262B694800552F0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74CD06BE262B6AA400552F0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74CD06C0262B6AB300552F0C /* HomeView.swift */,
+				74CD06C8262B6AC900552F0C /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74CD06BF262B6AA800552F0C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74CD06CD262B6B4D00552F0C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */,
+				74FB72F1262B89E400DA28A8 /* AppState.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */,
+				74FB72F7262B92D800DA28A8 /* siren.caf in Resources */,
 				74CD06A8262B694800552F0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,9 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */,
 				74CD06A2262B694800552F0C /* NotificationController.swift in Sources */,
 				74CD06A0262B694800552F0C /* ContentView.swift in Sources */,
+				74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */,
+				74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */,
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
+				74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */,
 				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
 				74CD06A4262B694800552F0C /* NotificationView.swift in Sources */,
 			);
