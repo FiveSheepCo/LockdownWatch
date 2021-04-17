@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74CD068D262B694500552F0C /* LockdownWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74CD0692262B694700552F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD0691262B694700552F0C /* Assets.xcassets */; };
+		74CD0699262B694800552F0C /* LockdownWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD069D262B694800552F0C /* LockdownWatchApp.swift */; };
+		74CD06A0262B694800552F0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD069F262B694800552F0C /* ContentView.swift */; };
+		74CD06A2262B694800552F0C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06A1262B694800552F0C /* NotificationController.swift */; };
+		74CD06A4262B694800552F0C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06A3262B694800552F0C /* NotificationView.swift */; };
+		74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06A5262B694800552F0C /* ComplicationController.swift */; };
+		74CD06A8262B694800552F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06A7262B694800552F0C /* Assets.xcassets */; };
+		74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06AA262B694800552F0C /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74CD068E262B694500552F0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74CD0682262B694500552F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CD068B262B694500552F0C;
+			remoteInfo = "LockdownWatch WatchKit App";
+		};
+		74CD069A262B694800552F0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74CD0682262B694500552F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CD0697262B694800552F0C;
+			remoteInfo = "LockdownWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74CD06B3262B694800552F0C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74CD0699262B694800552F0C /* LockdownWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CD06B7262B694800552F0C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				74CD068D262B694500552F0C /* LockdownWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		74CD0688262B694500552F0C /* LockdownWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockdownWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LockdownWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CD0691262B694700552F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74CD0693262B694700552F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LockdownWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CD069D262B694800552F0C /* LockdownWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownWatchApp.swift; sourceTree = "<group>"; };
+		74CD069F262B694800552F0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		74CD06A1262B694800552F0C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		74CD06A3262B694800552F0C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		74CD06A5262B694800552F0C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		74CD06A7262B694800552F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74CD06AA262B694800552F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74CD06AC262B694800552F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CD06AD262B694800552F0C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74CD0695262B694800552F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74CD0681262B694500552F0C = {
+			isa = PBXGroup;
+			children = (
+				74CD0690262B694500552F0C /* LockdownWatch WatchKit App */,
+				74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */,
+				74CD0689262B694500552F0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74CD0689262B694500552F0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74CD0688262B694500552F0C /* LockdownWatch.app */,
+				74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */,
+				74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74CD0690262B694500552F0C /* LockdownWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				74CD0691262B694700552F0C /* Assets.xcassets */,
+				74CD0693262B694700552F0C /* Info.plist */,
+			);
+			path = "LockdownWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				74CD069D262B694800552F0C /* LockdownWatchApp.swift */,
+				74CD069F262B694800552F0C /* ContentView.swift */,
+				74CD06A1262B694800552F0C /* NotificationController.swift */,
+				74CD06A3262B694800552F0C /* NotificationView.swift */,
+				74CD06A5262B694800552F0C /* ComplicationController.swift */,
+				74CD06A7262B694800552F0C /* Assets.xcassets */,
+				74CD06AC262B694800552F0C /* Info.plist */,
+				74CD06AD262B694800552F0C /* PushNotificationPayload.apns */,
+				74CD06A9262B694800552F0C /* Preview Content */,
+			);
+			path = "LockdownWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		74CD06A9262B694800552F0C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				74CD06AA262B694800552F0C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74CD0687262B694500552F0C /* LockdownWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CD06B8262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch" */;
+			buildPhases = (
+				74CD0686262B694500552F0C /* Resources */,
+				74CD06B7262B694800552F0C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74CD068F262B694500552F0C /* PBXTargetDependency */,
+			);
+			name = LockdownWatch;
+			productName = LockdownWatch;
+			productReference = 74CD0688262B694500552F0C /* LockdownWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		74CD068B262B694500552F0C /* LockdownWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CD06B4262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch WatchKit App" */;
+			buildPhases = (
+				74CD068A262B694500552F0C /* Resources */,
+				74CD06B3262B694800552F0C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74CD069B262B694800552F0C /* PBXTargetDependency */,
+			);
+			name = "LockdownWatch WatchKit App";
+			productName = "LockdownWatch WatchKit App";
+			productReference = 74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		74CD0697262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CD06B0262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch WatchKit Extension" */;
+			buildPhases = (
+				74CD0694262B694800552F0C /* Sources */,
+				74CD0695262B694800552F0C /* Frameworks */,
+				74CD0696262B694800552F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LockdownWatch WatchKit Extension";
+			productName = "LockdownWatch WatchKit Extension";
+			productReference = 74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74CD0682262B694500552F0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					74CD0687262B694500552F0C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					74CD068B262B694500552F0C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					74CD0697262B694800552F0C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 74CD0685262B694500552F0C /* Build configuration list for PBXProject "LockdownWatch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74CD0681262B694500552F0C;
+			productRefGroup = 74CD0689262B694500552F0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74CD0687262B694500552F0C /* LockdownWatch */,
+				74CD068B262B694500552F0C /* LockdownWatch WatchKit App */,
+				74CD0697262B694800552F0C /* LockdownWatch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74CD0686262B694500552F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CD068A262B694500552F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CD0692262B694700552F0C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CD0696262B694800552F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */,
+				74CD06A8262B694800552F0C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74CD0694262B694800552F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CD06A2262B694800552F0C /* NotificationController.swift in Sources */,
+				74CD06A0262B694800552F0C /* ContentView.swift in Sources */,
+				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
+				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
+				74CD06A4262B694800552F0C /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74CD068F262B694500552F0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CD068B262B694500552F0C /* LockdownWatch WatchKit App */;
+			targetProxy = 74CD068E262B694500552F0C /* PBXContainerItemProxy */;
+		};
+		74CD069B262B694800552F0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CD0697262B694800552F0C /* LockdownWatch WatchKit Extension */;
+			targetProxy = 74CD069A262B694800552F0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		74CD06AE262B694800552F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74CD06AF262B694800552F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74CD06B1262B694800552F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LockdownWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LockdownWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		74CD06B2262B694800552F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LockdownWatch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LockdownWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		74CD06B5262B694800552F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				IBSC_MODULE = LockdownWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "LockdownWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		74CD06B6262B694800552F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				IBSC_MODULE = LockdownWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "LockdownWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		74CD06B9262B694800552F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		74CD06BA262B694800552F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GM9SCC464R;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.splitty.LockdownWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74CD0685262B694500552F0C /* Build configuration list for PBXProject "LockdownWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CD06AE262B694800552F0C /* Debug */,
+				74CD06AF262B694800552F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CD06B0262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CD06B1262B694800552F0C /* Debug */,
+				74CD06B2262B694800552F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CD06B4262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CD06B5262B694800552F0C /* Debug */,
+				74CD06B6262B694800552F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CD06B8262B694800552F0C /* Build configuration list for PBXNativeTarget "LockdownWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CD06B9262B694800552F0C /* Debug */,
+				74CD06BA262B694800552F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74CD0682262B694500552F0C /* Project object */;
+}
