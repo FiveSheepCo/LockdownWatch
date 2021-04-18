@@ -24,6 +24,7 @@
 		74FB72F7262B92D800DA28A8 /* siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74FB72F6262B92D800DA28A8 /* siren.caf */; };
 		74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72FF262C363600DA28A8 /* LockdownState.swift */; };
 		74FB7305262C380400DA28A8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7304262C380400DA28A8 /* Config.swift */; };
+		74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB730A262C39F700DA28A8 /* DoubleTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		74FB72F6262B92D800DA28A8 /* siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = siren.caf; sourceTree = "<group>"; };
 		74FB72FF262C363600DA28A8 /* LockdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownState.swift; sourceTree = "<group>"; };
 		74FB7304262C380400DA28A8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		74FB730A262C39F700DA28A8 /* DoubleTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74FB7309262C39F000DA28A8 /* Helpers */,
 				74FB72FB262C35FA00DA28A8 /* Extensions */,
 				74FB72F6262B92D800DA28A8 /* siren.caf */,
 				74CD06CD262B6B4D00552F0C /* ViewModels */,
@@ -192,6 +195,14 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74FB7309262C39F000DA28A8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				74FB730A262C39F700DA28A8 /* DoubleTime.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
 				74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */,
 				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
+				74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */,
 				74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */,
 				74CD06A4262B694800552F0C /* NotificationView.swift in Sources */,
 			);

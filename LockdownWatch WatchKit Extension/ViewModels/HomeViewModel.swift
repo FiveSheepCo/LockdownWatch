@@ -9,39 +9,63 @@ import Foundation
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    private var timer: Timer? = nil
+    private var config: Config
+    private var calendar: Calendar
+    private var dateFormatter: DateFormatter
+    private var timer: Timer?
     
-    @Published var lockdownState: LockdownState = .freedom
+    private var lastDateComponents: DateComponents?
+    
+    @Published var lockdownState: LockdownState = .indeterminate
     @Published var currentHour: Double = 0
     @Published var currentTime: String = "..."
     
     init() {
-        self.update()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { timer in
-            self.update()
-        }
-    }
-    
-    private func update() {
-        let now = Date()
-        let calendar = Calendar.current
-        let componentsNow = calendar.dateComponents([.day, .hour, .minute], from: now)
+        self.config = .shared
+        self.calendar = .current
+        self.dateFormatter = DateFormatter()
+        self.dateFormatter.dateFormat = "HH:mm"
+        self.lastDateComponents = nil
         
-        if componentsNow.hour! >= 21 || componentsNow.hour! < 5 {
-            lockdownState = .lockdown
-        } else if componentsNow.hour! >= 20 && componentsNow.minute! >= 30 {
-            lockdownState = .lockdownSoon
-        } else {
-            lockdownState = .freedom
+        self.fastUpdate()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.fastUpdate()
         }
-        
-        currentHour = Double(componentsNow.hour!) + Double(componentsNow.minute!) / 60.0
-        currentTime = "\(componentsNow.hour!):\(componentsNow.minute!)"
     }
     
     deinit {
         if let timer = self.timer {
             timer.invalidate()
         }
+    }
+    
+    private func minuteChanged(_ a: DateComponents, _ b: DateComponents) -> Bool {
+        a.hour! != b.hour! || a.minute! != b.minute!
+    }
+    
+    /// This update function is supposed to be called every second.
+    /// It has to be very fast and efficient to avoid draining the battery.
+    private func fastUpdate() {
+        let now = Date()
+        let componentsNow = calendar.dateComponents([.day, .hour, .minute], from: now)
+        let nowDouble = DoubleTime.get(hour: componentsNow.hour!, minute: componentsNow.minute!)
+        
+        if let dateComponents = self.lastDateComponents, minuteChanged(dateComponents, componentsNow) {
+            update(now: now, nowDouble: nowDouble)
+        } else if lastDateComponents == nil {
+            update(now: now, nowDouble: nowDouble)
+        }
+        
+        self.lastDateComponents = componentsNow
+    }
+    
+    /// This more expensive update function is only called when the hour or minute changes.
+    private func update(now: Date, nowDouble: Double) {
+        currentHour = nowDouble
+        lockdownState = config.lockdownState(for: nowDouble)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        currentTime = dateFormatter.string(from: now)
     }
 }
