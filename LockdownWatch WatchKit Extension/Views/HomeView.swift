@@ -21,11 +21,7 @@ struct HomeView: View {
                 label: {
                     Text(model.currentTime)
                 },
-                currentValueLabel: { Text(model.lockdownState.emoji) },
-                markedValueLabels: {
-                    Text("Freedom").tag(5)
-                    Text("Lockdown").tag(21)
-                }
+                currentValueLabel: { Text(model.lockdownState.emoji) }
             )
             .gaugeStyle(
                 CircularGaugeStyle(
