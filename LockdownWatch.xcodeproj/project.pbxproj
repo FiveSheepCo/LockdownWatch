@@ -25,6 +25,7 @@
 		74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72FF262C363600DA28A8 /* LockdownState.swift */; };
 		74FB7305262C380400DA28A8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7304262C380400DA28A8 /* Config.swift */; };
 		74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB730A262C39F700DA28A8 /* DoubleTime.swift */; };
+		74FB7318262C47D400DA28A8 /* RKIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7317262C47D400DA28A8 /* RKIFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		74FB72FF262C363600DA28A8 /* LockdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownState.swift; sourceTree = "<group>"; };
 		74FB7304262C380400DA28A8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		74FB730A262C39F700DA28A8 /* DoubleTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTime.swift; sourceTree = "<group>"; };
+		74FB7317262C47D400DA28A8 /* RKIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKIFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74FB7316262C47C100DA28A8 /* API */,
 				74FB7309262C39F000DA28A8 /* Helpers */,
 				74FB72FB262C35FA00DA28A8 /* Extensions */,
 				74FB72F6262B92D800DA28A8 /* siren.caf */,
@@ -203,6 +206,14 @@
 				74FB730A262C39F700DA28A8 /* DoubleTime.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		74FB7316262C47C100DA28A8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				74FB7317262C47D400DA28A8 /* RKIFetcher.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 			files = (
 				74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */,
 				74CD06A2262B694800552F0C /* NotificationController.swift in Sources */,
+				74FB7318262C47D400DA28A8 /* RKIFetcher.swift in Sources */,
 				74CD06A0262B694800552F0C /* ContentView.swift in Sources */,
 				74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */,
 				74FB7305262C380400DA28A8 /* Config.swift in Sources */,
