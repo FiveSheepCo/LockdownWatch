@@ -10,6 +10,7 @@ import WatchKit
 import UserNotifications
 
 struct HomeView: View {
+    let config = Config.shared
     @ObservedObject var model = HomeViewModel()
     @ObservedObject var state: AppState = .shared
     
@@ -24,19 +25,7 @@ struct HomeView: View {
                 currentValueLabel: { Text(model.lockdownState.emoji) }
             )
             .gaugeStyle(
-                CircularGaugeStyle(
-                    tint: Gradient(
-                        stops: [
-                            .init(color: .red, location: 0), // 0h0m
-                            .init(color: .red, location: 0.2),
-                            .init(color: .green, location: 0.2), // 5h0m
-                            .init(color: .green, location: 0.83), // 5h0m
-                            .init(color: .yellow, location: 0.83), // 20h0m
-                            .init(color: .yellow, location: 0.875),
-                            .init(color: .red, location: 0.875), // 21h0m
-                        ]
-                    )
-                )
+                CircularGaugeStyle(tint: config.gaugeGradient)
             )
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .scaleEffect(2.0)

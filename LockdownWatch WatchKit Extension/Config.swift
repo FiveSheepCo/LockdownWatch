@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Config {
     static let shared: Config = .init()
@@ -21,6 +22,21 @@ struct Config {
     ]
     
     init() {
+    }
+    
+    var gaugeGradient: Gradient {
+        var colorStops: [Gradient.Stop] = []
+        
+        colorStops.append(.init(color: .red, location: 0))
+        colorStops.append(.init(color: .red, location: CGFloat(curfewActive[1] / 24.0)))
+        colorStops.append(.init(color: .green, location: CGFloat(curfewActive[1] / 24.0)))
+        colorStops.append(.init(color: .green, location: CGFloat(curfewWarn[0] / 24.0)))
+        colorStops.append(.init(color: .yellow, location: CGFloat(curfewWarn[0] / 24.0)))
+        colorStops.append(.init(color: .yellow, location: CGFloat(curfewWarn[1] / 24.0)))
+        colorStops.append(.init(color: .red, location: CGFloat(curfewActive[0] / 24.0)))
+        colorStops.append(.init(color: .red, location: 1))
+        
+        return Gradient(stops: colorStops)
     }
     
     func lockdownState(for timeNow: Double) -> LockdownState {
