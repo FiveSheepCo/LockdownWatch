@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Gauge(
-                value: Double(model.currentHour),
+                value: model.currentHour,
                 in: 0...24,
                 label: {
                     Text(model.currentTime)

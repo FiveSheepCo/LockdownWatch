@@ -22,6 +22,8 @@
 		74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */; };
 		74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72F1262B89E400DA28A8 /* AppState.swift */; };
 		74FB72F7262B92D800DA28A8 /* siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74FB72F6262B92D800DA28A8 /* siren.caf */; };
+		74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72FF262C363600DA28A8 /* LockdownState.swift */; };
+		74FB7305262C380400DA28A8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7304262C380400DA28A8 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		74FB72F1262B89E400DA28A8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		74FB72F6262B92D800DA28A8 /* siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = siren.caf; sourceTree = "<group>"; };
+		74FB72FF262C363600DA28A8 /* LockdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownState.swift; sourceTree = "<group>"; };
+		74FB7304262C380400DA28A8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				74FB72FB262C35FA00DA28A8 /* Extensions */,
 				74FB72F6262B92D800DA28A8 /* siren.caf */,
 				74CD06CD262B6B4D00552F0C /* ViewModels */,
 				74CD06BF262B6AA800552F0C /* Components */,
@@ -143,6 +148,7 @@
 				74CD06AC262B694800552F0C /* Info.plist */,
 				74CD06AD262B694800552F0C /* PushNotificationPayload.apns */,
 				74CD06A9262B694800552F0C /* Preview Content */,
+				74FB7304262C380400DA28A8 /* Config.swift */,
 			);
 			path = "LockdownWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -176,8 +182,16 @@
 			children = (
 				74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */,
 				74FB72F1262B89E400DA28A8 /* AppState.swift */,
+				74FB72FF262C363600DA28A8 /* LockdownState.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		74FB72FB262C35FA00DA28A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,10 +325,12 @@
 				74CD06A2262B694800552F0C /* NotificationController.swift in Sources */,
 				74CD06A0262B694800552F0C /* ContentView.swift in Sources */,
 				74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */,
+				74FB7305262C380400DA28A8 /* Config.swift in Sources */,
 				74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */,
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
 				74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */,
 				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
+				74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */,
 				74CD06A4262B694800552F0C /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
