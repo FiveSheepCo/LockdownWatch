@@ -8,15 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Config {
+class Config: ObservableObject {
     static let shared: Config = .init()
     
-    let curfewWarn = [
+    @Published var curfewWarn = [
         DoubleTime.get(hour: 20, minute: 30),
         DoubleTime.get(hour: 21, minute: 00)
     ]
     
-    let curfewActive = [
+    @Published var curfewActive = [
         DoubleTime.get(hour: 21, minute: 00),
         DoubleTime.get(hour: 05, minute: 00)
     ]

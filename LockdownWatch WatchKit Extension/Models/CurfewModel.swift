@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+class CurfewModel: ObservableObject {
     private var config: Config
     private var calendar: Calendar
     private var dateFormatter: DateFormatter
@@ -62,7 +62,12 @@ class HomeViewModel: ObservableObject {
     /// This more expensive update function is only called when the hour or minute changes.
     private func update(now: Date, nowDouble: Double) {
         currentHour = nowDouble
+        let previousLockdownState = lockdownState
         lockdownState = config.lockdownState(for: nowDouble)
+        
+        if previousLockdownState != .lockdown && lockdownState == .lockdown {
+            SoundPlayer.playSound()
+        }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"

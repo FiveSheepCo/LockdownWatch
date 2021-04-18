@@ -12,52 +12,31 @@ import UserNotifications
 struct HomeView: View {
     let config = Config.shared
     
-    @ObservedObject var model = HomeViewModel()
+    @ObservedObject var settings: SettingsModel = .shared
     @ObservedObject var state: AppState = .shared
-    @ObservedObject var rkiFetcher = RKIFetcher()
+    @ObservedObject var rkiFetcher = RKIFetcher.shared
+    @ObservedObject var jhuFetcher = JHUFetcher.shared
     
     init() {
-        rkiFetcher.fetch()
     }
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             Spacer()
             
-            Gauge(
-                value: model.currentHour,
-                in: 0...24,
-                label: {
-                    Text(model.currentTime)
-                },
-                currentValueLabel: { Text(model.lockdownState.emoji) }
-            )
-            .gaugeStyle(
-                CircularGaugeStyle(tint: config.gaugeGradient)
-            )
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .scaleEffect(2.0)
-            
-            Text(model.lockdownState.text)
+            CurfewGauge()
             
             Spacer()
             
             VStack(alignment: .center, spacing: 2) {
-                if let data = rkiFetcher.dataGermany {
+                if let data = rkiFetcher.dataGermany, settings.country == "Germany" {
                     HStack(alignment: .center) {
                         Text("📈")
                         Text("IW \(Int(data.weekIncidence))")
                         Text("R \(data.r.value, specifier: "%.2f")")
-                    }.frame(maxWidth: .infinity, maxHeight: 20)
+                    }.frame(maxWidth: .infinity)
                 }
-                
-                if let data = rkiFetcher.vaxData {
-                    HStack(alignment: .center) {
-                        Text("💉")
-                        Text("\(data.data.quote * 100, specifier: "%.2f")% first vax")
-                    }.frame(maxWidth: .infinity, maxHeight: 20)
-                }
-            }.font(.footnote).frame(maxWidth: .infinity)
+            }.font(.system(size: 10)).frame(maxWidth: .infinity)
             
             Spacer()
         }

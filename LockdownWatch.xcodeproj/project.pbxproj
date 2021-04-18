@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7428E104262C67BA008C0E0B /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E103262C67BA008C0E0B /* RegionSettingsView.swift */; };
+		7428E10C262C67C9008C0E0B /* CurfewSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E10B262C67C9008C0E0B /* CurfewSettingsView.swift */; };
+		7428E117262C6D0A008C0E0B /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 7428E116262C6D0A008C0E0B /* CodableCSV */; };
+		7428E11C262C6FFF008C0E0B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E11B262C6FFF008C0E0B /* Country.swift */; };
+		7428E12A262C750A008C0E0B /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E129262C750A008C0E0B /* SettingsModel.swift */; };
+		7428E12F262C8816008C0E0B /* JHUFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E12E262C8816008C0E0B /* JHUFetcher.swift */; };
+		7428E136262CAB26008C0E0B /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E135262CAB26008C0E0B /* GraphView.swift */; };
+		7428E13B262CB39A008C0E0B /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E13A262CB39A008C0E0B /* SoundPlayer.swift */; };
 		74CD068D262B694500552F0C /* LockdownWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		74CD0692262B694700552F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD0691262B694700552F0C /* Assets.xcassets */; };
 		74CD0699262B694800552F0C /* LockdownWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -19,13 +27,14 @@
 		74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06AA262B694800552F0C /* Preview Assets.xcassets */; };
 		74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C0262B6AB300552F0C /* HomeView.swift */; };
 		74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C8262B6AC900552F0C /* SettingsView.swift */; };
-		74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */; };
+		74CD06CF262B6B5A00552F0C /* CurfewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06CE262B6B5A00552F0C /* CurfewModel.swift */; };
 		74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72F1262B89E400DA28A8 /* AppState.swift */; };
 		74FB72F7262B92D800DA28A8 /* siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74FB72F6262B92D800DA28A8 /* siren.caf */; };
 		74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72FF262C363600DA28A8 /* LockdownState.swift */; };
 		74FB7305262C380400DA28A8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7304262C380400DA28A8 /* Config.swift */; };
 		74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB730A262C39F700DA28A8 /* DoubleTime.swift */; };
 		74FB7318262C47D400DA28A8 /* RKIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB7317262C47D400DA28A8 /* RKIFetcher.swift */; };
+		74FB7320262C5F1900DA28A8 /* CurfewGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB731F262C5F1900DA28A8 /* CurfewGauge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7428E103262C67BA008C0E0B /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
+		7428E10B262C67C9008C0E0B /* CurfewSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewSettingsView.swift; sourceTree = "<group>"; };
+		7428E11B262C6FFF008C0E0B /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7428E129262C750A008C0E0B /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		7428E12E262C8816008C0E0B /* JHUFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHUFetcher.swift; sourceTree = "<group>"; };
+		7428E135262CAB26008C0E0B /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		7428E13A262CB39A008C0E0B /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		74CD0688262B694500552F0C /* LockdownWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockdownWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CD068C262B694500552F0C /* LockdownWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LockdownWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CD0691262B694700552F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,13 +103,14 @@
 		74CD06AD262B694800552F0C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		74CD06C0262B6AB300552F0C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		74CD06C8262B6AC900552F0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		74CD06CE262B6B5A00552F0C /* CurfewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewModel.swift; sourceTree = "<group>"; };
 		74FB72F1262B89E400DA28A8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		74FB72F6262B92D800DA28A8 /* siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = siren.caf; sourceTree = "<group>"; };
 		74FB72FF262C363600DA28A8 /* LockdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockdownState.swift; sourceTree = "<group>"; };
 		74FB7304262C380400DA28A8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		74FB730A262C39F700DA28A8 /* DoubleTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleTime.swift; sourceTree = "<group>"; };
 		74FB7317262C47D400DA28A8 /* RKIFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKIFetcher.swift; sourceTree = "<group>"; };
+		74FB731F262C5F1900DA28A8 /* CurfewGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewGauge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,18 +118,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7428E117262C6D0A008C0E0B /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7428E102262C67AE008C0E0B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7428E103262C67BA008C0E0B /* RegionSettingsView.swift */,
+				7428E10B262C67C9008C0E0B /* CurfewSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7428E115262C6D0A008C0E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74CD0681262B694500552F0C = {
 			isa = PBXGroup;
 			children = (
 				74CD0690262B694500552F0C /* LockdownWatch WatchKit App */,
 				74CD069C262B694800552F0C /* LockdownWatch WatchKit Extension */,
 				74CD0689262B694500552F0C /* Products */,
+				7428E115262C6D0A008C0E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +177,7 @@
 				74FB7309262C39F000DA28A8 /* Helpers */,
 				74FB72FB262C35FA00DA28A8 /* Extensions */,
 				74FB72F6262B92D800DA28A8 /* siren.caf */,
-				74CD06CD262B6B4D00552F0C /* ViewModels */,
+				74CD06CD262B6B4D00552F0C /* Models */,
 				74CD06BF262B6AA800552F0C /* Components */,
 				74CD06BE262B6AA400552F0C /* Views */,
 				74CD069D262B694800552F0C /* LockdownWatchApp.swift */,
@@ -170,8 +205,10 @@
 		74CD06BE262B6AA400552F0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7428E102262C67AE008C0E0B /* Settings */,
 				74CD06C0262B6AB300552F0C /* HomeView.swift */,
 				74CD06C8262B6AC900552F0C /* SettingsView.swift */,
+				7428E135262CAB26008C0E0B /* GraphView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,18 +216,21 @@
 		74CD06BF262B6AA800552F0C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				74FB731F262C5F1900DA28A8 /* CurfewGauge.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		74CD06CD262B6B4D00552F0C /* ViewModels */ = {
+		74CD06CD262B6B4D00552F0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74CD06CE262B6B5A00552F0C /* HomeViewModel.swift */,
+				74CD06CE262B6B5A00552F0C /* CurfewModel.swift */,
 				74FB72F1262B89E400DA28A8 /* AppState.swift */,
 				74FB72FF262C363600DA28A8 /* LockdownState.swift */,
+				7428E11B262C6FFF008C0E0B /* Country.swift */,
+				7428E129262C750A008C0E0B /* SettingsModel.swift */,
 			);
-			path = ViewModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		74FB72FB262C35FA00DA28A8 /* Extensions */ = {
@@ -204,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				74FB730A262C39F700DA28A8 /* DoubleTime.swift */,
+				7428E13A262CB39A008C0E0B /* SoundPlayer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				74FB7317262C47D400DA28A8 /* RKIFetcher.swift */,
+				7428E12E262C8816008C0E0B /* JHUFetcher.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -232,6 +274,9 @@
 				74CD068F262B694500552F0C /* PBXTargetDependency */,
 			);
 			name = LockdownWatch;
+			packageProductDependencies = (
+				7428E111262C6D03008C0E0B /* CodableCSV */,
+			);
 			productName = LockdownWatch;
 			productReference = 74CD0688262B694500552F0C /* LockdownWatch.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -266,6 +311,9 @@
 			dependencies = (
 			);
 			name = "LockdownWatch WatchKit Extension";
+			packageProductDependencies = (
+				7428E116262C6D0A008C0E0B /* CodableCSV */,
+			);
 			productName = "LockdownWatch WatchKit Extension";
 			productReference = 74CD0698262B694800552F0C /* LockdownWatch WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -299,6 +347,9 @@
 				Base,
 			);
 			mainGroup = 74CD0681262B694500552F0C;
+			packageReferences = (
+				7428E110262C6D03008C0E0B /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			productRefGroup = 74CD0689262B694500552F0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,15 +394,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7428E12A262C750A008C0E0B /* SettingsModel.swift in Sources */,
+				7428E13B262CB39A008C0E0B /* SoundPlayer.swift in Sources */,
 				74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */,
 				74CD06A2262B694800552F0C /* NotificationController.swift in Sources */,
 				74FB7318262C47D400DA28A8 /* RKIFetcher.swift in Sources */,
 				74CD06A0262B694800552F0C /* ContentView.swift in Sources */,
 				74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */,
+				74FB7320262C5F1900DA28A8 /* CurfewGauge.swift in Sources */,
 				74FB7305262C380400DA28A8 /* Config.swift in Sources */,
-				74CD06CF262B6B5A00552F0C /* HomeViewModel.swift in Sources */,
+				74CD06CF262B6B5A00552F0C /* CurfewModel.swift in Sources */,
+				7428E12F262C8816008C0E0B /* JHUFetcher.swift in Sources */,
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
+				7428E11C262C6FFF008C0E0B /* Country.swift in Sources */,
 				74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */,
+				7428E104262C67BA008C0E0B /* RegionSettingsView.swift in Sources */,
+				7428E10C262C67C9008C0E0B /* CurfewSettingsView.swift in Sources */,
+				7428E136262CAB26008C0E0B /* GraphView.swift in Sources */,
 				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
 				74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */,
 				74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */,
@@ -643,6 +702,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7428E110262C6D03008C0E0B /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7428E111262C6D03008C0E0B /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7428E110262C6D03008C0E0B /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+		7428E116262C6D0A008C0E0B /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7428E110262C6D03008C0E0B /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74CD0682262B694500552F0C /* Project object */;
 }

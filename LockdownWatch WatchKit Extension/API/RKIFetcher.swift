@@ -49,12 +49,14 @@ struct RKIVaxData: Codable {
 }
 
 class RKIFetcher: ObservableObject {
+    static let shared: RKIFetcher = .init()
+    
     private let jsonDecoder = JSONDecoder()
     
     @Published var dataGermany: RKIDataGermany?
     @Published var vaxData: RKIVaxData?
     
-    init() {
+    private init() {
         dataGermany = nil
         vaxData = nil
     }

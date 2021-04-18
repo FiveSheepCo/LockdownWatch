@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Tab {
     case main
+    case graphs
     case settings
 }
 
@@ -22,19 +23,23 @@ struct ContentView: View {
     }
     
     var body: some View {
-        HomeView()
-//        TabView(selection: $activeTab) {
-//            HomeView()
-//                .tabItem {
-//                    Image(systemName: "house")
-//                }
-//                .tag(Tab.main)
-//            SettingsView()
-//                .tabItem {
-//                    Image(systemName: "gear")
-//                }
-//                .tag(Tab.settings)
-//        }
+        TabView(selection: $activeTab) {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                }
+                .tag(Tab.main)
+            GraphView()
+                .tabItem {
+                    Image(systemName: "chart.pie")
+                }
+                .tag(Tab.graphs)
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                }
+                .tag(Tab.settings)
+        }
     }
 }
 
