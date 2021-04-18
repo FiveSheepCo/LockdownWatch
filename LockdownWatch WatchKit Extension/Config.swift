@@ -21,7 +21,7 @@ struct Config {
         DoubleTime.get(hour: 05, minute: 00)
     ]
     
-    init() {
+    private init() {
     }
     
     var gaugeGradient: Gradient {
