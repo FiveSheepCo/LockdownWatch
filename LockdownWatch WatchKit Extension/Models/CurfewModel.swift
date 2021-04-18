@@ -65,7 +65,7 @@ class CurfewModel: ObservableObject {
         let previousLockdownState = lockdownState
         lockdownState = config.lockdownState(for: nowDouble)
         
-        if previousLockdownState != .lockdown && lockdownState == .lockdown {
+        if previousLockdownState != .lockdown && previousLockdownState != .indeterminate && lockdownState == .lockdown {
             SoundPlayer.playSound()
         }
         
