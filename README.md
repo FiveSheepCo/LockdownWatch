@@ -17,6 +17,19 @@ Supported countries: `[ USA, Germany ]`
 | JHU CSSE GIS Data | [Link](https://github.com/CSSEGISandData/COVID-19)  | Global      |
 | RKI API v2        | [Link](https://api.corona-zahlen.org)               | Germany     |
 
-## Screenshots
+### JHU CSSE GIS Data
 
-![Screenshot](./screenshot.png)
+Supported:
+- Cases Confirmed
+- Cases Dead
+- Cases Recovered
+- Cases Active
+
+### RKI API v2
+> Only supported in Germany.
+
+Supported:
+- R-value
+- Week incidence
+- 1st shot vaccination progress
+- 2nd shot vaccination progress
