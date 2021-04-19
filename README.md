@@ -1,9 +1,22 @@
 # LockdownWatch
 > Lockdown reminder for WatchOS.
 
-I made this app for myself to remind me of the Covid19 curfew in my city.
+## About
+
+LockdownWatch supports the following features:
+
+- Configurable curfew watch and reminder
+- Regional SARS-CoV-2 statistics
+
+Supported countries: `[ USA, Germany ]`
+
+## Data Sources
+
+| Data Source       | Link                                                | Countries   |
+| ----------------- | --------------------------------------------------- | ----------- |
+| JHU CSSE GIS Data | [Link](https://github.com/CSSEGISandData/COVID-19)  | Global      |
+| RKI API v2        | [Link](https://api.corona-zahlen.org)               | Germany     |
+
+## Screenshots
 
 ![Screenshot](./screenshot.png)
-
-There are no settings, notification times are fixed.  
-If you wanna use it, please compile it yourself and adjust the `Config.swift` file as needed.
