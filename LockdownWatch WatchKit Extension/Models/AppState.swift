@@ -29,7 +29,22 @@ class AppState: ObservableObject {
     }
     
     func setupNotifications() {
+        let settings = SettingsModel.shared
         let center = UNUserNotificationCenter.current()
+        center.removePendingNotificationRequests(withIdentifiers: [uuidLockdownSoon, uuidLockdown])
+        
+        guard let warnTime = settings.curfewWarn, let startTime = settings.curfewStart else {
+            return
+        }
+        
+        let warnTimeH = Int(warnTime - warnTime.truncatingRemainder(dividingBy: 1))
+        let warnTimeM = Int(warnTime.truncatingRemainder(dividingBy: 1) * 60)
+        
+        let startTimeH = Int(startTime - startTime.truncatingRemainder(dividingBy: 1))
+        let startTimeM = Int(startTime.truncatingRemainder(dividingBy: 1) * 60)
+        
+        print("[Setup/Notification] LockdownSoon at \(warnTimeH):\(warnTimeM)")
+        print("[Setup/Notification] Lockdown at \(startTimeH):\(startTimeM)")
         
         let contentLockdownSoon = UNMutableNotificationContent()
         contentLockdownSoon.title = "WARNING"
@@ -40,8 +55,8 @@ class AppState: ObservableObject {
         contentLockdown.body = "The purge has started."
         contentLockdown.sound = UNNotificationSound.defaultCritical
         
-        let componentLockdownSoon = DateComponents(hour: 20, minute: 30, second: 0)
-        let componentLockdown = DateComponents(hour: 21, minute: 0, second: 0)
+        let componentLockdownSoon = DateComponents(hour: warnTimeH, minute: warnTimeM, second: 0)
+        let componentLockdown = DateComponents(hour: startTimeH, minute: startTimeM, second: 0)
         
         let triggerLockdownSoon = UNCalendarNotificationTrigger(dateMatching: componentLockdownSoon, repeats: true)
         let triggerLockdown = UNCalendarNotificationTrigger(dateMatching: componentLockdown, repeats: true)
@@ -56,8 +71,6 @@ class AppState: ObservableObject {
             content: contentLockdown,
             trigger: triggerLockdown
         )
-        
-        center.removePendingNotificationRequests(withIdentifiers: [uuidLockdownSoon, uuidLockdown])
         
         center.add(requestLockdownSoon) { error in
             print("[Setup/Notification] LockdownSoon: \(error == nil ? "Success" : "Error")")
