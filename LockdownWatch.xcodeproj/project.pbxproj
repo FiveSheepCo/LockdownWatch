@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741330562633286B0080AF2B /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741330552633286B0080AF2B /* TimePicker.swift */; };
+		7413305B263328A80080AF2B /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7413305A263328A80080AF2B /* TimeComponent.swift */; };
 		7428E104262C67BA008C0E0B /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E103262C67BA008C0E0B /* RegionSettingsView.swift */; };
 		7428E10C262C67C9008C0E0B /* CurfewSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428E10B262C67C9008C0E0B /* CurfewSettingsView.swift */; };
 		7428E117262C6D0A008C0E0B /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 7428E116262C6D0A008C0E0B /* CodableCSV */; };
@@ -80,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		741330552633286B0080AF2B /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		7413305A263328A80080AF2B /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
 		7428E103262C67BA008C0E0B /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		7428E10B262C67C9008C0E0B /* CurfewSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewSettingsView.swift; sourceTree = "<group>"; };
 		7428E11B262C6FFF008C0E0B /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				74FB731F262C5F1900DA28A8 /* CurfewGauge.swift */,
+				741330552633286B0080AF2B /* TimePicker.swift */,
+				7413305A263328A80080AF2B /* TimeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */,
 				74FB7320262C5F1900DA28A8 /* CurfewGauge.swift in Sources */,
 				74FB7305262C380400DA28A8 /* Config.swift in Sources */,
+				7413305B263328A80080AF2B /* TimeComponent.swift in Sources */,
 				74CD06CF262B6B5A00552F0C /* CurfewModel.swift in Sources */,
 				7428E12F262C8816008C0E0B /* JHUFetcher.swift in Sources */,
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
@@ -414,6 +421,7 @@
 				74CD069E262B694800552F0C /* LockdownWatchApp.swift in Sources */,
 				74FB730B262C39F700DA28A8 /* DoubleTime.swift in Sources */,
 				74FB7300262C363600DA28A8 /* LockdownState.swift in Sources */,
+				741330562633286B0080AF2B /* TimePicker.swift in Sources */,
 				74CD06A4262B694800552F0C /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
