@@ -33,18 +33,13 @@ class AppState: ObservableObject {
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: [uuidLockdownSoon, uuidLockdown])
         
-        guard let warnTime = settings.curfewWarn, let startTime = settings.curfewStart else {
-            return
-        }
+        guard settings.curfewEnabled else { return }
         
-        let warnTimeH = Int(warnTime - warnTime.truncatingRemainder(dividingBy: 1))
-        let warnTimeM = Int(warnTime.truncatingRemainder(dividingBy: 1) * 60)
+        let warnTime = TimeComponent(settings.curfewWarn)
+        let startTime = TimeComponent(settings.curfewStart)
         
-        let startTimeH = Int(startTime - startTime.truncatingRemainder(dividingBy: 1))
-        let startTimeM = Int(startTime.truncatingRemainder(dividingBy: 1) * 60)
-        
-        print("[Setup/Notification] LockdownSoon at \(warnTimeH):\(warnTimeM)")
-        print("[Setup/Notification] Lockdown at \(startTimeH):\(startTimeM)")
+        print("[Setup/Notification] LockdownSoon at \(warnTime.wholeHour):\(warnTime.wholeMinute)")
+        print("[Setup/Notification] Lockdown at \(startTime.wholeHour):\(startTime.wholeMinute)")
         
         let contentLockdownSoon = UNMutableNotificationContent()
         contentLockdownSoon.title = "WARNING"
@@ -55,8 +50,8 @@ class AppState: ObservableObject {
         contentLockdown.body = "The purge has started."
         contentLockdown.sound = UNNotificationSound.defaultCritical
         
-        let componentLockdownSoon = DateComponents(hour: warnTimeH, minute: warnTimeM, second: 0)
-        let componentLockdown = DateComponents(hour: startTimeH, minute: startTimeM, second: 0)
+        let componentLockdownSoon = DateComponents(hour: warnTime.wholeHour, minute: warnTime.wholeMinute, second: 0)
+        let componentLockdown = DateComponents(hour: startTime.wholeHour, minute: startTime.wholeMinute, second: 0)
         
         let triggerLockdownSoon = UNCalendarNotificationTrigger(dateMatching: componentLockdownSoon, repeats: true)
         let triggerLockdown = UNCalendarNotificationTrigger(dateMatching: componentLockdown, repeats: true)

@@ -15,9 +15,9 @@ struct CurfewGauge: View {
     var gaugeGradient: Gradient {
         var colorStops: [Gradient.Stop] = []
         
-        let warn = min(24, settings.curfewWarn ?? 20.5)
-        let start = min(24, settings.curfewStart ?? 21)
-        let end = min(24, settings.curfewEnd ?? 5)
+        let warn = settings.curfewWarn
+        let start = settings.curfewStart
+        let end = settings.curfewEnd
         
         colorStops.append(.init(color: .red, location: 0))
         colorStops.append(.init(color: .red, location: CGFloat(end / 24.0)))

@@ -21,7 +21,6 @@ struct RegionSettingsView: View {
             set: { country in
                 settings.country = country.id
                 settings.state = "All"
-                JHUFetcher.shared.rehash()
             }
         )
     }
@@ -33,7 +32,6 @@ struct RegionSettingsView: View {
             },
             set: { state in
                 settings.state = state
-                JHUFetcher.shared.rehash()
             }
         )
     }
@@ -41,10 +39,13 @@ struct RegionSettingsView: View {
     var body: some View {
         VStack {
             Picker("Country", selection: countryBinding) {
-                ForEach(Country.allCases) { country in
+                ForEach(Country.allCases, id: \.id) { country in
                     Text(country.name).tag(country)
                 }
             }
+            .pickerStyle(WheelPickerStyle())
+            .defaultWheelPickerItemHeight(24)
+            .frame(height: 70)
             
             if !countryBinding.wrappedValue.states.isEmpty {
                 Picker("Province/State", selection: stateBinding) {
@@ -52,8 +53,18 @@ struct RegionSettingsView: View {
                         Text(state).tag(state)
                     }
                 }
+                .pickerStyle(WheelPickerStyle())
+                .defaultWheelPickerItemHeight(24)
+            } else {
+                Text("No regions available.")
             }
-        }.navigationTitle("Region")
+            
+            Spacer()
+        }
+        .navigationTitle("Region")
+        .onDisappear {
+            JHUFetcher.shared.rehash()
+        }
     }
 }
 

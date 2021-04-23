@@ -9,7 +9,7 @@ import SwiftUI
 import WatchKit
 import UserNotifications
 
-struct HomeView: View {
+struct CurfewView: View {
     let config = Config.shared
     
     @ObservedObject var settings: SettingsModel = .shared
@@ -17,8 +17,7 @@ struct HomeView: View {
     @ObservedObject var rkiFetcher = RKIFetcher.shared
     @ObservedObject var jhuFetcher = JHUFetcher.shared
     
-    init() {
-    }
+    @State private var timer: Timer? = nil
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -41,15 +40,25 @@ struct HomeView: View {
             Spacer()
         }
         .onAppear {
-            Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { _ in
+            self.rkiFetcher.fetch()
+            if let timer = self.timer {
+                timer.invalidate()
+            }
+            self.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { _ in
                 self.rkiFetcher.fetch()
             })
+        }
+        .onDisappear {
+            if let timer = self.timer {
+                timer.invalidate()
+                self.timer = nil
+            }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        CurfewView()
     }
 }

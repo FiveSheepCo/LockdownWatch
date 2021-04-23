@@ -8,13 +8,17 @@
 import Foundation
 
 enum Country: CaseIterable, Identifiable {
-    case germany
     case usa
+    case germany
+    case france
+    case romania
     
     var id: String {
         switch self {
         case .germany: return "Germany"
         case .usa: return "US"
+        case .france: return "France"
+        case .romania: return "Romania"
         }
     }
     
@@ -22,6 +26,8 @@ enum Country: CaseIterable, Identifiable {
         switch self {
         case .germany: return "Germany"
         case .usa: return "USA"
+        case .france: return "France"
+        case .romania: return "Romania"
         }
     }
     
@@ -106,6 +112,8 @@ enum Country: CaseIterable, Identifiable {
                 "Wisconsin",
                 "Wyoming",
             ]
+        default:
+            return []
         }
     }
 }

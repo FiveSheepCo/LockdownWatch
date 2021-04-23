@@ -8,14 +8,15 @@
 import SwiftUI
 
 enum Tab {
-    case main
+    case curfew
     case graphs
     case settings
 }
 
 struct ContentView: View {
-    @State var activeTab: Tab = .main
+    @State var activeTab: Tab = SettingsModel.shared.curfewEnabled ? .curfew : .graphs
     @ObservedObject var state: AppState = .shared
+    @ObservedObject var settings: SettingsModel = .shared
     
     init() {
         state.requestPermissions()
@@ -24,11 +25,13 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $activeTab) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                }
-                .tag(Tab.main)
+            if settings.curfewEnabled {
+                CurfewView()
+                    .tabItem {
+                        Image(systemName: "house")
+                    }
+                    .tag(Tab.curfew)
+            }
             GraphView()
                 .tabItem {
                     Image(systemName: "chart.pie")

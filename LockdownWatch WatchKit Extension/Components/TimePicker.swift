@@ -12,6 +12,7 @@ struct TimePicker: View {
     
     @State private var hourFocused: Bool = false
     @State private var minuteFocused: Bool = false
+    @State private var curfewEnabled: Bool = true
 
     static let formatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()

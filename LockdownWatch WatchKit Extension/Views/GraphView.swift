@@ -34,10 +34,7 @@ struct GraphView: View {
     @ObservedObject var rkiFetcher = RKIFetcher.shared
     @ObservedObject var jhuFetcher = JHUFetcher.shared
     
-    init() {
-        rkiFetcher.fetch()
-        jhuFetcher.fetch()
-    }
+    @State private var timer: Timer? = nil
     
     var columns: [GridItem] {
         let device = WKInterfaceDevice.current()
@@ -52,7 +49,7 @@ struct GraphView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 2) {
             
-            // John Hopkins University Data
+            // Johns Hopkins University Data
             if let data = jhuFetcher.data {
                 Text("\(data.country) (\(data.state))")
                 LazyVGrid(columns: columns, spacing: 2) {
@@ -81,6 +78,26 @@ struct GraphView: View {
                         Text("\(data.data.secondVaccination.quote * 100, specifier: "%.2f")%")
                     }
                 }
+            }
+            
+            Spacer()
+        }
+        .onAppear {
+            if jhuFetcher.data == nil {
+                jhuFetcher.fetch()
+            }
+            rkiFetcher.fetch()
+            if let timer = self.timer {
+                timer.invalidate()
+            }
+            self.timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { _ in
+                self.rkiFetcher.fetch()
+            })
+        }
+        .onDisappear {
+            if let timer = self.timer {
+                timer.invalidate()
+                self.timer = nil
             }
         }
     }

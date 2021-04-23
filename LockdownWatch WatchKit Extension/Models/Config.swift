@@ -27,16 +27,12 @@ class Config: ObservableObject {
     }
     
     private func isCurfewActive(_ timeNow: Double) -> Bool {
-        guard let start = settings.curfewStart, let end = settings.curfewEnd else {
-            return false
-        }
-        return timeNow >= start || timeNow <= end
+        guard settings.curfewEnabled else { return false }
+        return timeNow >= settings.curfewStart || timeNow <= settings.curfewEnd
     }
     
     private func isCurfewWarn(_ timeNow: Double) -> Bool {
-        guard let start = settings.curfewWarn, let end = settings.curfewStart else {
-            return false
-        }
-        return timeNow >= start && timeNow <= end
+        guard settings.curfewEnabled else { return false }
+        return timeNow >= settings.curfewWarn && timeNow <= settings.curfewStart
     }
 }

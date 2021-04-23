@@ -27,7 +27,7 @@
 		74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06A5262B694800552F0C /* ComplicationController.swift */; };
 		74CD06A8262B694800552F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06A7262B694800552F0C /* Assets.xcassets */; };
 		74CD06AB262B694800552F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CD06AA262B694800552F0C /* Preview Assets.xcassets */; };
-		74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C0262B6AB300552F0C /* HomeView.swift */; };
+		74CD06C1262B6AB300552F0C /* CurfewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C0262B6AB300552F0C /* CurfewView.swift */; };
 		74CD06C9262B6AC900552F0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06C8262B6AC900552F0C /* SettingsView.swift */; };
 		74CD06CF262B6B5A00552F0C /* CurfewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD06CE262B6B5A00552F0C /* CurfewModel.swift */; };
 		74FB72F2262B89E400DA28A8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB72F1262B89E400DA28A8 /* AppState.swift */; };
@@ -105,7 +105,7 @@
 		74CD06AA262B694800552F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74CD06AC262B694800552F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CD06AD262B694800552F0C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		74CD06C0262B6AB300552F0C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		74CD06C0262B6AB300552F0C /* CurfewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewView.swift; sourceTree = "<group>"; };
 		74CD06C8262B6AC900552F0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		74CD06CE262B6B5A00552F0C /* CurfewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurfewModel.swift; sourceTree = "<group>"; };
 		74FB72F1262B89E400DA28A8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				7428E102262C67AE008C0E0B /* Settings */,
-				74CD06C0262B6AB300552F0C /* HomeView.swift */,
+				74CD06C0262B6AB300552F0C /* CurfewView.swift */,
 				74CD06C8262B6AC900552F0C /* SettingsView.swift */,
 				7428E135262CAB26008C0E0B /* GraphView.swift */,
 			);
@@ -414,7 +414,7 @@
 				7428E12F262C8816008C0E0B /* JHUFetcher.swift in Sources */,
 				74CD06A6262B694800552F0C /* ComplicationController.swift in Sources */,
 				7428E11C262C6FFF008C0E0B /* Country.swift in Sources */,
-				74CD06C1262B6AB300552F0C /* HomeView.swift in Sources */,
+				74CD06C1262B6AB300552F0C /* CurfewView.swift in Sources */,
 				7428E104262C67BA008C0E0B /* RegionSettingsView.swift in Sources */,
 				7428E10C262C67C9008C0E0B /* CurfewSettingsView.swift in Sources */,
 				7428E136262CAB26008C0E0B /* GraphView.swift in Sources */,

@@ -16,33 +16,36 @@ struct CurfewSettingsView: View {
     
     init() {
         let settings = SettingsModel.shared
-        curfewWarn = TimeComponent(settings.curfewWarn ?? 20.5)
-        curfewStart = TimeComponent(settings.curfewStart ?? 21)
-        curfewEnd = TimeComponent(settings.curfewEnd ?? 5)
+        curfewWarn = TimeComponent(settings.curfewWarn)
+        curfewStart = TimeComponent(settings.curfewStart)
+        curfewEnd = TimeComponent(settings.curfewEnd)
     }
     
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
-                VStack(spacing: 0) {
-                    Text("Warn at")
-                    TimePicker(timeComponent: curfewWarn)
-                }
-                VStack(spacing: 0) {
-                    Text("Starts at")
-                    TimePicker(timeComponent: curfewStart)
-                }
-                VStack(spacing: 0) {
-                    Text("Ends at")
-                    TimePicker(timeComponent: curfewEnd)
+                Toggle("Enabled", isOn: $settings.curfewEnabled).toggleStyle(SwitchToggleStyle())
+                if settings.curfewEnabled {
+                    VStack(spacing: 0) {
+                        Text("Warn at")
+                        TimePicker(timeComponent: curfewWarn)
+                    }
+                    VStack(spacing: 0) {
+                        Text("Starts at")
+                        TimePicker(timeComponent: curfewStart)
+                    }
+                    VStack(spacing: 0) {
+                        Text("Ends at")
+                        TimePicker(timeComponent: curfewEnd)
+                    }
                 }
             }
         }
         .navigationTitle("Curfew")
         .onAppear {
-            curfewWarn.update(settings.curfewWarn ?? 20.5)
-            curfewStart.update(settings.curfewStart ?? 21)
-            curfewEnd.update(settings.curfewEnd ?? 5)
+            curfewWarn.update(settings.curfewWarn)
+            curfewStart.update(settings.curfewStart)
+            curfewEnd.update(settings.curfewEnd)
         }
         .onDisappear {
             settings.curfewWarn = curfewWarn.time
