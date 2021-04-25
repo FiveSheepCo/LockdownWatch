@@ -40,12 +40,52 @@ struct RKIVaxData: Codable {
             let quote: Double
         }
         
+        struct State: Codable {
+            let name: String
+            let delta: Int
+            let quote: Double
+            let secondVaccination: SecondVaccination
+        }
+        
+        struct StateDict: Codable {
+            let BW: State
+            let BY: State
+            let BE: State
+            let BB: State
+            let HB: State
+            let HH: State
+            let HE: State
+            let MV: State
+            let NI: State
+            let NW: State
+            let RP: State
+            let SL: State
+            let SN: State
+            let ST: State
+            let SH: State
+            let TH: State
+            
+            var allStates: [State] {
+                [BW, BY, BE, BB, HB, HH, HE, MV, NI, NW, RP, SL, SN, ST, SH, TH]
+            }
+        }
+        
         let delta: Int
         let quote: Double
         let secondVaccination: SecondVaccination
+        let states: StateDict
     }
     
     let data: Data
+}
+
+struct RKISpecificVaxData {
+    struct SecondVaccination {
+        let quote: Double
+    }
+    
+    let quote: Double
+    let secondVaccination: SecondVaccination
 }
 
 class RKIFetcher: ObservableObject {
@@ -54,7 +94,9 @@ class RKIFetcher: ObservableObject {
     private let jsonDecoder = JSONDecoder()
     
     @Published var dataGermany: RKIDataGermany?
-    @Published var vaxData: RKIVaxData?
+    
+    private var vaxData: RKIVaxData?
+    @Published var specificVaxData: RKISpecificVaxData?
     
     private init() {
         dataGermany = nil
@@ -64,6 +106,36 @@ class RKIFetcher: ObservableObject {
     func fetch() {
         fetchGermany()
         fetchVaccinations()
+    }
+    
+    func rehash() {
+        func rkiNormalized(state: String) -> String {
+            state
+                .replacingOccurrences(of: "ü", with: "u")
+                .replacingOccurrences(of: "ä", with: "a")
+                .replacingOccurrences(of: "ö", with: "o")
+                .replacingOccurrences(of: "ß", with: "ss")
+        }
+        guard let vaxData = self.vaxData else { return }
+        if let state = SettingsModel.shared.state {
+            if let stateData = vaxData.data.states.allStates.first(where: { value in
+                rkiNormalized(state: value.name) == state
+            }) {
+                specificVaxData = RKISpecificVaxData(
+                    quote: stateData.quote,
+                    secondVaccination: RKISpecificVaxData.SecondVaccination(
+                        quote: stateData.secondVaccination.quote
+                    )
+                )
+                return
+            }
+        }
+        specificVaxData = RKISpecificVaxData(
+            quote: vaxData.data.quote,
+            secondVaccination: RKISpecificVaxData.SecondVaccination(
+                quote: vaxData.data.secondVaccination.quote
+            )
+        )
     }
     
     private func fetchGermany() {
@@ -80,7 +152,7 @@ class RKIFetcher: ObservableObject {
                     self.dataGermany = data
                 }
             } else {
-                print("FAILED TO DECODE DATA")
+                print("[RKIFetcher] FAILED TO DECODE GERMANY DATA")
             }
         }.resume()
     }
@@ -97,9 +169,10 @@ class RKIFetcher: ObservableObject {
             if let data = try? self.jsonDecoder.decode(RKIVaxData.self, from: data) {
                 DispatchQueue.main.async {
                     self.vaxData = data
+                    self.rehash()
                 }
             } else {
-                print("FAILED TO DECODE DATA")
+                print("[RKIFetcher] FAILED TO DECODE VAX DATA")
             }
         }.resume()
     }

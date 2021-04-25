@@ -64,6 +64,7 @@ struct RegionSettingsView: View {
         .navigationTitle("Region")
         .onDisappear {
             JHUFetcher.shared.rehash()
+            RKIFetcher.shared.rehash()
         }
     }
 }

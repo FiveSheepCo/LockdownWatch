@@ -69,13 +69,13 @@ struct GraphView: View {
             }
             
             // Robert Koch Institute Data
-            if let data = rkiFetcher.vaxData, settings.country == "Germany" {
+            if let data = rkiFetcher.specificVaxData, settings.country == "Germany" {
                 LazyVGrid(columns: columns, spacing: 2) {
                     GraphEntry(name: "💉 1st Shot") {
-                        Text("\(data.data.quote * 100, specifier: "%.2f")%")
+                        Text("\(data.quote * 100, specifier: "%.2f")%")
                     }
                     GraphEntry(name: "💉 2nd Shot") {
-                        Text("\(data.data.secondVaccination.quote * 100, specifier: "%.2f")%")
+                        Text("\(data.secondVaccination.quote * 100, specifier: "%.2f")%")
                     }
                 }
             }
