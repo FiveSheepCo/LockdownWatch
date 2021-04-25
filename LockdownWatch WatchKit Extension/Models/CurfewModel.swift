@@ -62,12 +62,13 @@ class CurfewModel: ObservableObject {
     /// This more expensive update function is only called when the hour or minute changes.
     private func update(now: Date, nowDouble: Double) {
         currentHour = nowDouble
-        let previousLockdownState = lockdownState
+        // let previousLockdownState = lockdownState
         lockdownState = config.lockdownState(for: nowDouble)
         
-        if previousLockdownState != .lockdown && previousLockdownState != .indeterminate && lockdownState == .lockdown {
-            SoundPlayer.playSound()
-        }
+        // NOTE: This seems to be problematic sometimes
+        // if previousLockdownState != .lockdown && previousLockdownState != .indeterminate && lockdownState == .lockdown {
+        //     SoundPlayer.playSound()
+        // }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
